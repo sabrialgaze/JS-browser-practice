@@ -1,0 +1,142 @@
+body {
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 400;
+    min-height: 100vh;
+    color: rgb(50, 50, 50);
+    background-image: linear-gradient(to top right, #cae1f9 0%, #74a1bc 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.underline {
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 10px;
+    margin: 40px 0 10px;
+}
+
+.container {
+    margin-top: 20px;
+    margin-bottom: 20PX;
+    border-radius: 10px;
+    padding: 30px;
+    width: 30vw;
+    background-color: #cee2fd;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+}
+
+.inc-exp-container {
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0 / 10%)2px 2px 1px;
+    padding: 10px;
+    display: flex;
+    justify-content:center;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.inc-exp-container > div {
+    flex: 1;
+    text-align: center;
+}
+
+.inc-exp-container > div:first-of-type {
+    border-right: 1px solid #dedede;
+}
+
+
+.income-text {
+    color: rgb(0, 172, 143);
+}
+
+.expense-text {
+    color: rgb(255, 83, 83);
+}
+
+.form {
+    position: relative;
+    width: 100%;
+}
+
+label {
+    display: inline-block;
+    margin: 10px 0;
+}
+
+input {
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 5px;
+    display: block;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+    padding: 10px;
+    width: 100%;
+}
+
+label p {
+    font-size: 13px;
+    margin: 0;
+}
+
+.transaction-button {
+    cursor: pointer;
+    background-color: rgba(80, 114, 164, 0.724);
+    box-shadow: rgb(0 0 0 / 10%)2px 2px 1px;
+    color: rgb(255, 255, 255);
+    border: none;
+    display: block;
+    font-size: 1rem;
+    margin: 10px 0 30px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.list li {
+    background-color: rgb(255, 255, 255);
+    box-shadow: var(--box--shadow);
+    color: rgb(50, 50, 50);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.list li.plus {
+    border-right: 5px solid rgb(0, 172, 143)1;
+}
+  
+.list li.minus {
+    border-right: 5px solid rgb(255, 83, 83);
+}
+
+.delete-button {
+    cursor: pointer;
+    background-color: rgb(255, 83, 83);
+    border: 0;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    line-height: 20px;
+    padding: 2px 5px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.list li:hover .delete-btn {
+    opacity: 1;
+}

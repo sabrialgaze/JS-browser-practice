@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+
+        <section class="balance">
+            <h3 class="balance-headline">Your balance</h3>
+            <h2 class="balance-total">0,00 €</h2>
+            <div class="inc-exp-container">
+                <div>
+                    <h4>Income</h4>
+                    <p id="income-text" class="income-text">0,00 €</p>
+                </div>
+                <div>
+                    <h4>Expense</h4>
+                    <p id="expense-text" class="expense-text">0,00 €</p>
+                  </div>
+            </div>
+        </section>
+
+        <section class="history">
+            <h3 class="underline">History</h3>
+            <ul id="list" class="list">
+                <li class="minus">
+                    Cash <span>-400 €</span><button class="delete-button">x</button>
+                </li>
+            </ul>
+        </section>
+
+        <section class="add-transaction">
+            <h3 class="underline">Add a new transaction</h3>
+            <form class="form" id="transaction">
+                <div class="concept">
+                    <label for="concept">Concept</label>
+                    <input type="text" id="concept" placeholder="Add a new concept">
+                </div>
+                <div class="amount">
+                    <label for="amount">Amount<br><p>(negative = expense, positive = income)</p></label>
+                    <input type="number" step="0.1" id="amount" placeholder="Add an amount"> 
+                </div>
+                <div>
+                    <button class="transaction-button">Add transaction</button>
+                </div>
+            </form>
+        </section>
+
+    </div>
+</body>
+</html>
