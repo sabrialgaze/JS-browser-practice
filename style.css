@@ -1,3 +1,7 @@
+h1 {
+    text-align: center;
+}
+
 body {
     font-family:'Courier New', Courier, monospace;
     font-weight: 400;
@@ -29,10 +33,9 @@ body {
 .inc-exp-container {
     background-color: rgb(255, 255, 255);
     box-shadow: rgb(0 0 0 / 10%)2px 2px 1px;
-    padding: 10px;
     display: flex;
     justify-content:center;
-    margin: 20px;
+    margin: 45px;
     border-radius: 5px;
 }
 
@@ -67,12 +70,12 @@ label {
 input {
     border: none;
     border-radius: 5px;
-
     font-family: 'Courier New', Courier, monospace;
     font-size: 13px;
-    padding: 10px;
-    width: 100%;
+    padding: 10px 0 10px 5px;
+    width: 99%;
 }
+
 
 label p {
     font-size: 13px;
@@ -85,14 +88,12 @@ label p {
     box-shadow: rgb(0 0 0 / 10%)2px 2px 1px;
     color: rgb(255, 255, 255);
     border: none;
-    display: block;
     font-family: 'Courier New', Courier, monospace;
     font-size: 1rem;
-    margin: 10px 0 30px;
     padding: 10px;
     border-radius: 5px;
-    width: 100%;
-    
+    display: block;
+    margin: auto;   
 }
 
 .list {

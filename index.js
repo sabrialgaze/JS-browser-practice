@@ -33,6 +33,7 @@ function addTransaction(event){
         transactions.push(transaction);
         addTransactionToDOM(transaction);
         updateValues();
+        updateLocalStorage(transactions)
         concept.value = "";
         amount.value = "";
 
@@ -52,7 +53,7 @@ function addTransactionToDOM(transaction){
         transaction.amount < 0 ? "minus" : "plus"
     )
         
-    item.innerHTML = `${transaction.text}<span>${sign}${Math.abs(transaction.amount)}</span><button class="delete-button" onclick="removeTransaction(${transaction.id})">x</button>`;
+    item.innerHTML = `${transaction.concept}<span>${sign}${Math.abs(transaction.amount)}</span><button class="delete-button" onclick="removeTransaction(${transaction.id})">x</button>`;
 
     list.appendChild(item);
 }
@@ -69,7 +70,7 @@ function updateValues(){
     expenseNegative.innerText = `${expense}€`;
 }
 
-function updateLocalStorage(){
+function updateLocalStorage(transactions){
     localStorage.setItem("transactions",JSON.stringify(transactions));
 }
 
