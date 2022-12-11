@@ -9,11 +9,11 @@
 </head>
 <body>
     <div class="container">
-        <h1>Expense Tracker</h1>
+        <h1>Expense Manager</h1>
 
         <section class="balance">
             <h3 class="balance-headline">Your balance</h3>
-            <h2 class="balance-total">0,00 €</h2>
+            <h2 id="balance-total" class="balance-total">0,00 €</h2>
             <div class="inc-exp-container">
                 <div>
                     <h4>Income</h4>
@@ -29,15 +29,12 @@
         <section class="history">
             <h3 class="underline">History</h3>
             <ul id="list" class="list">
-                <li class="minus">
-                    Cash <span>-400 €</span><button class="delete-button">x</button>
-                </li>
             </ul>
         </section>
 
         <section class="add-transaction">
             <h3 class="underline">Add a new transaction</h3>
-            <form class="form" id="transaction">
+            <form class="form" id="form">
                 <div class="concept">
                     <label for="concept">Concept</label>
                     <input type="text" id="concept" placeholder="Add a new concept">
@@ -53,5 +50,6 @@
         </section>
 
     </div>
+    <script src="index.js"></script>
 </body>
 </html>

@@ -3,7 +3,6 @@ body {
     font-weight: 400;
     min-height: 100vh;
     color: rgb(50, 50, 50);
-    background-image: linear-gradient(to top right, #cae1f9 0%, #74a1bc 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -87,6 +86,7 @@ label p {
     color: rgb(255, 255, 255);
     border: none;
     display: block;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 1rem;
     margin: 10px 0 30px;
     padding: 10px;
@@ -111,14 +111,6 @@ label p {
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
-}
-
-.list li.plus {
-    border-right: 5px solid rgb(0, 172, 143)1;
-}
-  
-.list li.minus {
-    border-right: 5px solid rgb(255, 83, 83);
 }
 
 .delete-button {
