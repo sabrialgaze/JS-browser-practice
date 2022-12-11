@@ -8,7 +8,10 @@ const concept = document.getElementById("concept");
 const amount = document.getElementById("amount");
 
 
-let transactions = []
+const localStorageTransactions = JSON.parse(localStorage.getItem('transactions'));
+let transactions = localStorage.getItem("transactions") !== null ? localStorageTransactions : [];
+
+form.addEventListener("submit", addTransaction)
 
 function generateRandomID(){
     return Math.floor(Math.random()*1000000000);
@@ -22,9 +25,9 @@ function addTransaction(event){
         alert("Concept and amount should be filled")
     }else{
         const transaction ={
-            id: generateRandomID(),
             concept: concept.value,
-            amount: +amount.value
+            amount: +amount.value,
+            id: generateRandomID()
         }
 
         transactions.push(transaction);
@@ -66,6 +69,10 @@ function updateValues(){
     expenseNegative.innerText = `${expense}€`;
 }
 
+function updateLocalStorage(){
+    localStorage.setItem("transactions",JSON.stringify(transactions));
+}
+
 function initialization(){
     list.innerHTML = "";
     transactions.forEach(addTransactionToDOM);
@@ -74,5 +81,3 @@ function initialization(){
 
 
 initialization();
-
-form.addEventListener("submit", addTransaction)

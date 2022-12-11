@@ -65,9 +65,9 @@ label {
 }
 
 input {
-    border: 1px solid rgb(230, 230, 230);
+    border: none;
     border-radius: 5px;
-    display: block;
+
     font-family: 'Courier New', Courier, monospace;
     font-size: 13px;
     padding: 10px;
@@ -113,22 +113,22 @@ label p {
     border-radius: 5px;
 }
 
+
 .delete-button {
     cursor: pointer;
-    background-color: rgb(255, 83, 83);
+    background-color: rgb(212, 212, 212);
     border: 0;
     color: rgb(255, 255, 255);
-    font-size: 20px;
-    line-height: 20px;
-    padding: 2px 5px;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(-100%, -50%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    font-size: 12px;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 5px;
+    padding: 8px;
+    transition: .05s;   
 }
 
-.list li:hover .delete-btn {
-    opacity: 1;
+.delete-button:hover{
+    background-color: rgb(255, 83, 83);
 }
+
+
+
